@@ -18,21 +18,10 @@
         };
 
         window.lampa_settings.disable_features.dmca = true;
-        window.lampa_settings.dcma = [];
-
-       
+        window.lampa_settings.dcma = [];      
     }
 
-    function startPlugin() {
-      window.plugin_antidcma_ready = true;
-      if (window.appready) {
-        start();
-      }
-      else {
-        Lampa.Listener.follow('app', function (e) {
-          if (e.type === 'ready') start();
-        });
-      }
-    }
-    if (!window.plugin_antidcma_ready) startPlugin();
+    Lampa.Listener.follow('app', function (e) {
+        if (e.type === 'ready') start();
+    });
 })();
