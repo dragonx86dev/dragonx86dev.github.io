@@ -18,8 +18,27 @@
         };
 
         window.lampa_settings.disable_features.dmca = true;
+        window.lampa_settings.dcma = [];
 
         Lampa.Utils.dcma = function () { return undefined };
+
+        Lampa.Listener.follow('request_secuses', function (event) {
+            if (event.data.blocked) {
+                window.lampa_settings.dcma = [];
+
+                var active = Lampa.Activity.active();
+                active.source = 'tmdb';
+                Lampa.Storage.set('source', 'tmdb', true);
+
+                setTimeout(function () {
+                    setTimeout(function () {
+                        Lampa.Activity.replace(active);
+                        Lampa.Storage.set('source', defaultSource, true);
+                    }, 300);
+                    Lampa.Controller.toggle('content');
+                }, 250);
+            }
+        });
     }
 
     function startPlugin() {
