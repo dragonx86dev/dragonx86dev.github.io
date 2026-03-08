@@ -18,10 +18,15 @@
         };
 
         window.lampa_settings.disable_features.dmca = true;
-        window.lampa_settings.dcma = [];      
+        window.lampa_settings.dcma = [];
     }
 
-    Lampa.Listener.follow('app', function (e) {
-        if (e.type === 'ready') start();
-    });
+    if (window.appready) {
+        start();
+    }
+    else {
+        Lampa.Listener.follow('app', function (e) {
+            if (e.type === 'ready') start();
+        });
+    }
 })();
