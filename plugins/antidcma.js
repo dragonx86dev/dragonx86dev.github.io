@@ -4,7 +4,7 @@
     function start() {
         var proxy = {
             path_image: 'nl.imagetmdb.com/',
-            path_api: 'tmdb-api.rootu.top/3/'
+            path_api: 'lampa.byskaz.ru/tmdb/api/3/'
         };
     
         Lampa.TMDB.image = function (url) {
