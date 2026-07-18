@@ -24,7 +24,11 @@
         window.lampa_settings.dcma = [];
         window.lampa_settings.lgbt = [];   
 
-        Lampa.Storage.set('lgbt_content_block', false);
+        Lampa.Storage.set('lgbt_content_block', {
+            name: 'lgbt_content_block',
+            type: 'trigger',
+            default: false
+        });
         Object.defineProperty(Lampa.VPN, 'is', {
             get: function() {
                 return function(need_array = []) {
