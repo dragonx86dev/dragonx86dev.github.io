@@ -17,21 +17,16 @@
             return 'http://' + (Lampa.Storage.field('proxy_tmdb') ? proxy.path_api + url : base).replace(/\/\//g, '/');
         };
 
-        Lampa.Utils.dcma = function () { return undefined };
-        Lampa.VPN.is = function(need_array = []) {
-            console.log('Вызвана переопределенная функция is с массивом:', need_array);
-            // Ваша новая логика. Например, всегда возвращать true:
-            return false; 
-        };
-
-        console.log(Lampa.VPN.is(['ru', 'by']));
-
-        Lampa.Storage.set('lgbt_content_block', false);   
 
         window.lampa_settings.disable_features.dmca = true;
         window.lampa_settings.disable_features.lgbt = true;
+        window.lampa_settings.disable_features.install_proxy = true;
+
         window.lampa_settings.dcma = [];
-        window.lampa_settings.lgbt = [];            
+        window.lampa_settings.lgbt = [];   
+
+        Lampa.Storage.set('lgbt_content_block', false);   
+        Lampa.Utils.dcma = function () { return undefined };
     }
 
     start();
