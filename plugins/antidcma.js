@@ -28,6 +28,21 @@
         Lampa.Storage.set('lgbt_content_block', false);   
         Lampa.Utils.dcma = function () { return undefined };
 
+        try {
+            Object.defineProperty(Lampa.VPN, 'is', {
+                get: function() {
+                    return function(need_array = []) {
+                        console.log('Глобальный перехват is:', need_array);
+                        return false; // Ваша логика
+                    };
+                },
+                configurable: true // Позволяет перезаписать существующее свойство
+            });
+            console.log('VPN.is успешно переопределен глобально');
+        } catch(e) {
+            console.error('Не удалось переопределить VPN.is:', e);
+        }
+
         console.log(`vpn region = ${Lampa.VPN.is(['ru', 'by'])}`);
     }
 
