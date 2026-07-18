@@ -25,22 +25,6 @@
         window.lampa_settings.lgbt = false;   
 
         Lampa.Utils.dcma = function () { return undefined };
-        /*
-        Lampa.Storage.set('lgbt_content_block', {
-            name: 'lgbt_content_block',
-            type: 'trigger',
-            default: false
-        });
-        */
-        Object.defineProperty(Lampa.VPN, 'is', {
-            get: function() {
-                return function(need_array = []) {
-                    console.log('Глобальный перехват is:', need_array);
-                    return false; // Ваша логика
-                };
-            },
-            configurable: true
-        });
     }
 
     start();
