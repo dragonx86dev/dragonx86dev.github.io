@@ -22,7 +22,7 @@
         window.lampa_settings.dcma = [];
         window.lampa_settings.lgbt = [];
     
-        Lampa.Storage.set('lgbt_content_block', false);
+        Lampa.Storage.set('lgbt_content_block', "false111");
 
         console.log(`lgbt_content_block = ${Lampa.Storage.get('lgbt_content_block')}`);
         Lampa.Utils.dcma = function () { return undefined };
