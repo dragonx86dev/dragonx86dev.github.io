@@ -18,7 +18,7 @@
         };
 
         Lampa.Utils.dcma = function () { return undefined };
-        VPN.is = function(need_array = []) {
+        Lampa.VPN.is = function(need_array = []) {
             console.log('Вызвана переопределенная функция is с массивом:', need_array);
             // Ваша новая логика. Например, всегда возвращать true:
             return false; 
