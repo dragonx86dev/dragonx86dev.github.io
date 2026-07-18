@@ -22,10 +22,14 @@
         window.lampa_settings.dcma = [];
         window.lampa_settings.lgbt = [];
     
-        Lampa.Storage.set('lgbt_content_block', "false111");
+        Lampa.Storage.set('lgbt_content_block', false);
 
-        console.log(`lgbt_content_block = ${Lampa.Storage.get('lgbt_content_block')}`);
         Lampa.Utils.dcma = function () { return undefined };
+        Lampa.VPN.is = function(need_array = []) {
+            console.log('Вызвана переопределенная функция is с массивом:', need_array);
+            // Ваша новая логика. Например, всегда возвращать true:
+            return false; 
+        };
     }
 
     start();
