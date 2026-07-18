@@ -24,6 +24,8 @@
             return false; 
         };
 
+        console.log(Lampa.VPN.is(['ru', 'by']));
+
         Lampa.Storage.set('lgbt_content_block', false);   
 
         window.lampa_settings.disable_features.dmca = true;
