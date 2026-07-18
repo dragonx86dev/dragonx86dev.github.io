@@ -21,7 +21,9 @@
         window.lampa_settings.disable_features.lgbt = true;
         window.lampa_settings.dcma = [];
         window.lampa_settings.lgbt = [];
-        Lampa.Utils.dcma = function () { return undefined };
+    
+        Lampa.Storage.set('lgbt_content_block', false);
+        // Lampa.Utils.dcma = function () { return undefined };
     }
 
     start();
