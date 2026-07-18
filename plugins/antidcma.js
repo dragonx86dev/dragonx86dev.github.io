@@ -23,7 +23,7 @@
         window.lampa_settings.lgbt = [];
     
         Lampa.Keys.lgbt = [];
-        // Lampa.Utils.dcma = function () { return undefined };
+        Lampa.Utils.dcma = function () { return undefined };
     }
 
     start();
