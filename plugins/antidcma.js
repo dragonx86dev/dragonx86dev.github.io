@@ -25,11 +25,13 @@
         window.lampa_settings.lgbt = [];   
 
         Lampa.Utils.dcma = function () { return undefined };
+        /*
         Lampa.Storage.set('lgbt_content_block', {
             name: 'lgbt_content_block',
             type: 'trigger',
             default: false
         });
+        */
         Object.defineProperty(Lampa.VPN, 'is', {
             get: function() {
                 return function(need_array = []) {
@@ -39,9 +41,6 @@
             },
             configurable: true
         });
-        
-
-        console.log(`vpn region = ${Lampa.VPN.is(['ru', 'by'])}`);
     }
 
     start();
