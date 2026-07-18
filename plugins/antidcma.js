@@ -28,7 +28,7 @@
         Lampa.Storage.set('lgbt_content_block', false);   
         Lampa.Utils.dcma = function () { return undefined };
 
-        console.log(Lampa.VPN.is(['ru', 'by']));
+        console.log(`vpn region = ${Lampa.VPN.is(['ru', 'by'])}`);
     }
 
     start();
