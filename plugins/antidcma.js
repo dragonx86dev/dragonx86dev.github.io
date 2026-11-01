@@ -3,7 +3,7 @@
 
     function start() {
         var proxy = {
-            path_image: 'imagetmdb.cub.red/',
+            path_image: 'nl.imagetmdb.com/',
             path_api: 'tmdb-api.rootu.top/3/'
         };
     
